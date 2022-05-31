@@ -13,9 +13,6 @@ A simple SPA made with Angular and has the functionality to:
 - Remove a todo
 
 
-
-
-
 ## Running locally
 
 Make sure to run the backend app first
@@ -25,6 +22,7 @@ Make sure to run the backend app first
   npm install // install all dependencies
   ng serve // start the app
 ```
+
 ## Back end
 
 A simple backend application to support todo functionalities and has the services to:
@@ -35,6 +33,10 @@ A simple backend application to support todo functionalities and has the service
 - Update a todo
 - Remove a todo
 
+## Running locally
+
+- Run docker-compose.yaml
+- Run spring application
 
 ## API Reference
 
