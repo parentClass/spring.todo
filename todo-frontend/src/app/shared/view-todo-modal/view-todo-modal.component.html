@@ -1,0 +1,18 @@
+<ng-template #viewTodoModalContent let-modal>
+  <div class="modal-header">
+    <div class="modal-title">
+      {{ todo.title }}
+    </div>
+    <button
+      type="button"
+      class="close"
+      aria-label="Close"
+      (click)="modal.dismiss('Cross click')"
+    >
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    {{ todo.note }}
+  </div>
+</ng-template>

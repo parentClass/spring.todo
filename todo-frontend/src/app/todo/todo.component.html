@@ -1,0 +1,17 @@
+<div class="row">
+  <app-card
+    class="col-6 mb-3"
+    [todo]="todo"
+    *ngFor="let todo of todos$ | async"
+    (finishTodo)="finishTodo($event)"
+    (removeTodo)="removeTodo($event)"
+    (openUpdateTodoModal)="openUpdateTodoModal($event)"
+    (viewTodoModal)="viewTodoModal(todo)"
+  ></app-card>
+</div>
+
+<app-update-todo-modal #content (updateTodo)="updateTodo($event)">
+</app-update-todo-modal>
+
+<app-view-todo-modal #viewTodo>
+</app-view-todo-modal>

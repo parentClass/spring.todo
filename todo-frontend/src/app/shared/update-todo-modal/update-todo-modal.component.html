@@ -1,0 +1,41 @@
+<ng-template #updateModalContent let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Update todo</h4>
+    <button
+      type="button"
+      class="close"
+      aria-label="Close"
+      (click)="modal.dismiss('Cross click')"
+    >
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <form [formGroup]="todoForm" (ngSubmit)="onUpdateTodo()">
+      <div class="form-group">
+        <label for="title">Title</label>
+        <input
+          type="text"
+          class="form-control"
+          id="title"
+          required
+          formControlName="title"
+          name="title"
+        />
+      </div>
+      <div class="form-group">
+        <label for="title">Note</label>
+        <textarea
+          type="text"
+          class="form-control"
+          id="note"
+          required
+          formControlName="note"
+          name="note"
+        >
+        </textarea>
+      </div>
+      <button type="submit" class="btn btn-primary btn-block">Update</button>
+    </form>
+  </div>
+</ng-template>
