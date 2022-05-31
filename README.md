@@ -95,5 +95,5 @@ A simple backend application to support todo functionalities and has the service
 
 **Client:** Angular
 
-**Server:** Spring boot
+**Server:** Spring boot, Docker, MongoDB
 
