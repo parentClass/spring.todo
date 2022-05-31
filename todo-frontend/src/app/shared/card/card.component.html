@@ -1,0 +1,50 @@
+<div class="card text-white h-100" [ngClass]="identifyTodoStatus(todo.status)">
+  <div class="card-header">
+    <span>{{ todo.status | titlecase | todoStatusPipe }}</span>
+    <span class="float-end">
+      <a
+        href="#!"
+        class="badge bg-info"
+        [ngClass]="isTodoCompleted(todo.status)"
+        (click)="toggleTodo(todo)"
+        >Finish</a
+      >&nbsp;
+      <a
+        href="#!"
+        class="badge bg-dark"
+        [ngClass]="isTodoCompleted(todo.status)"
+        (click)="doUpdateTodo(todo)"
+        >Modify</a
+      >&nbsp;
+      <a
+        href="#!"
+        class="badge bg-danger"
+        [ngClass]="canTodoBeRemoved(todo.status)"
+        (click)="doRemoveTodo(todo)"
+        >Remove</a
+      >&nbsp;
+      <a
+        href="#!"
+        class="badge bg-warning"
+        (click)="doViewTodo(todo)"
+        >View</a
+      >&nbsp;
+    </span>
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">{{ todo.title }}</h5>
+    <p class="card-text text-truncate">{{ todo.note }}</p>
+    <div>
+      <span><sub>Added on:</sub></span
+      ><span class="float-end">
+        <sub>{{ todo.created_at | date: "medium" }}</sub>
+      </span>
+    </div>
+    <div *ngIf="isTodoCompleted(todo.status)">
+      <span><sub>Completed on:</sub></span
+      ><span class="float-end">
+        <sub>{{ todo.completed_at | date: "medium" }}</sub>
+      </span>
+    </div>
+  </div>
+</div>

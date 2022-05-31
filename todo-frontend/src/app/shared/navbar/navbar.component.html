@@ -1,0 +1,8 @@
+<nav class="navbar navbar-dark bg-dark mb-5">
+  <div class="container-fluid">
+    <span class="navbar-brand mb-0 h1">TodoApp</span>
+    <a href="#!" class="text-white" (click)="open()">Add Todo</a>
+  </div>
+</nav>
+
+<app-add-todo-modal #content (addTodo)="addTodo($event)"></app-add-todo-modal>
